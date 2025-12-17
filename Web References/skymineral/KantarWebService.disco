@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://skymineral.erp.uyumcloud.com/CustomPrg/xml/KantarWebService.asmx?wsdl" docRef="https://skymineral.erp.uyumcloud.com/CustomPrg/xml/KantarWebService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://skymineral.erp.uyumcloud.com/CustomPrg/xml/KantarWebService.asmx" xmlns:q1="http://tempuri.org/" binding="q1:KantarWebServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://skymineral.erp.uyumcloud.com/CustomPrg/xml/KantarWebService.asmx" xmlns:q2="http://tempuri.org/" binding="q2:KantarWebServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

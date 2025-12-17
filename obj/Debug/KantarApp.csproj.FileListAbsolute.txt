@@ -1,0 +1,10 @@
+C:\Projects\Others\SKY\KantarApp\bin\Debug\KantarApp.exe.config
+C:\Projects\Others\SKY\KantarApp\bin\Debug\KantarApp.exe
+C:\Projects\Others\SKY\KantarApp\bin\Debug\KantarApp.pdb
+C:\Projects\Others\SKY\KantarApp\obj\Debug\KantarApp.csproj.AssemblyReference.cache
+C:\Projects\Others\SKY\KantarApp\obj\Debug\KantarApp.Form1.resources
+C:\Projects\Others\SKY\KantarApp\obj\Debug\KantarApp.Properties.Resources.resources
+C:\Projects\Others\SKY\KantarApp\obj\Debug\KantarApp.csproj.GenerateResource.cache
+C:\Projects\Others\SKY\KantarApp\obj\Debug\KantarApp.csproj.CoreCompileInputs.cache
+C:\Projects\Others\SKY\KantarApp\obj\Debug\KantarApp.exe
+C:\Projects\Others\SKY\KantarApp\obj\Debug\KantarApp.pdb

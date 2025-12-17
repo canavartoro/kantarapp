@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWord">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KantarYaz">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="kantardegeri" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KantarYazResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KantarYazResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWordSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWord" />
+  </wsdl:message>
+  <wsdl:message name="HelloWordSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWordResponse" />
+  </wsdl:message>
+  <wsdl:message name="KantarYazSoapIn">
+    <wsdl:part name="parameters" element="tns:KantarYaz" />
+  </wsdl:message>
+  <wsdl:message name="KantarYazSoapOut">
+    <wsdl:part name="parameters" element="tns:KantarYazResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWordHttpGetIn" />
+  <wsdl:message name="HelloWordHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="KantarYazHttpGetIn">
+    <wsdl:part name="kantardegeri" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="KantarYazHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="HelloWordHttpPostIn" />
+  <wsdl:message name="HelloWordHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="KantarYazHttpPostIn">
+    <wsdl:part name="kantardegeri" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="KantarYazHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="KantarWebServiceSoap">
+    <wsdl:operation name="HelloWord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Servis test</wsdl:documentation>
+      <wsdl:input message="tns:HelloWordSoapIn" />
+      <wsdl:output message="tns:HelloWordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KantarYaz">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Servis test</wsdl:documentation>
+      <wsdl:input message="tns:KantarYazSoapIn" />
+      <wsdl:output message="tns:KantarYazSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="KantarWebServiceHttpGet">
+    <wsdl:operation name="HelloWord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Servis test</wsdl:documentation>
+      <wsdl:input message="tns:HelloWordHttpGetIn" />
+      <wsdl:output message="tns:HelloWordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KantarYaz">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Servis test</wsdl:documentation>
+      <wsdl:input message="tns:KantarYazHttpGetIn" />
+      <wsdl:output message="tns:KantarYazHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="KantarWebServiceHttpPost">
+    <wsdl:operation name="HelloWord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Servis test</wsdl:documentation>
+      <wsdl:input message="tns:HelloWordHttpPostIn" />
+      <wsdl:output message="tns:HelloWordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KantarYaz">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Servis test</wsdl:documentation>
+      <wsdl:input message="tns:KantarYazHttpPostIn" />
+      <wsdl:output message="tns:KantarYazHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="KantarWebServiceSoap" type="tns:KantarWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWord">
+      <soap:operation soapAction="http://tempuri.org/HelloWord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KantarYaz">
+      <soap:operation soapAction="http://tempuri.org/KantarYaz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="KantarWebServiceSoap12" type="tns:KantarWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWord">
+      <soap12:operation soapAction="http://tempuri.org/HelloWord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KantarYaz">
+      <soap12:operation soapAction="http://tempuri.org/KantarYaz" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="KantarWebServiceHttpGet" type="tns:KantarWebServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWord">
+      <http:operation location="/HelloWord" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KantarYaz">
+      <http:operation location="/KantarYaz" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="KantarWebServiceHttpPost" type="tns:KantarWebServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWord">
+      <http:operation location="/HelloWord" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KantarYaz">
+      <http:operation location="/KantarYaz" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="KantarWebService">
+    <wsdl:port name="KantarWebServiceSoap" binding="tns:KantarWebServiceSoap">
+      <soap:address location="https://skymineral.erp.uyumcloud.com/CustomPrg/xml/KantarWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="KantarWebServiceSoap12" binding="tns:KantarWebServiceSoap12">
+      <soap12:address location="https://skymineral.erp.uyumcloud.com/CustomPrg/xml/KantarWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="KantarWebServiceHttpGet" binding="tns:KantarWebServiceHttpGet">
+      <http:address location="https://skymineral.erp.uyumcloud.com/CustomPrg/xml/KantarWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="KantarWebServiceHttpPost" binding="tns:KantarWebServiceHttpPost">
+      <http:address location="https://skymineral.erp.uyumcloud.com/CustomPrg/xml/KantarWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
