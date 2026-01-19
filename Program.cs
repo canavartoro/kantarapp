@@ -19,7 +19,7 @@ namespace KantarApp
 
 			Logger.AddListener();
 
-			Application.Run(new Form1());
+			Application.Run(new Form2());
 		}
 	}
 }

@@ -8,3 +8,4 @@ C:\Projects\Others\SKY\KantarApp\obj\Debug\KantarApp.csproj.GenerateResource.cac
 C:\Projects\Others\SKY\KantarApp\obj\Debug\KantarApp.csproj.CoreCompileInputs.cache
 C:\Projects\Others\SKY\KantarApp\obj\Debug\KantarApp.exe
 C:\Projects\Others\SKY\KantarApp\obj\Debug\KantarApp.pdb
+C:\Projects\Others\SKY\KantarApp\obj\Debug\KantarApp.Form2.resources

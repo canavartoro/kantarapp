@@ -27,7 +27,7 @@ namespace KantarApp
 		}
 
 		[System.Xml.Serialization.XmlElement("TraceLevel")]
-		public int TraceLevel { get; set; } = 2;
+		public int TraceLevel { get; set; } = 4;
 
 	}
 }
